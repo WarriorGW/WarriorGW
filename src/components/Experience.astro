@@ -1,0 +1,17 @@
+---
+import ExpItem from "./ExpItem.astro";
+
+const EXPLIST = [
+	{
+		title: "Catalogo web - Dulces Recuerdos",
+		date: "Junio 2023 - Septiembre 2023",
+		description:
+			"Creacion de un catálogo web para la empresa Dulces Recuerdos, para que los clientes puedan ver los productos que se ofrecen.",
+		link: "https://www.facebook.com/Dulces.Recuerdos.Ags",
+	},
+];
+---
+
+<ol class="relative border-s border-gray-200 ml-4">
+	{EXPLIST.map((exp) => <ExpItem {...exp} />)}
+</ol>

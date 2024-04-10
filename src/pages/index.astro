@@ -1,0 +1,96 @@
+---
+import Badge from "../components/Badge.astro";
+import LinkedInIcon from "../icons/LinkedInIcon.astro";
+import SocialPill from "../components/SocialPill.astro";
+import Layout from "../layouts/Layout.astro";
+import GitHubIcon from "../icons/GitHubIcon.astro";
+import MailIcon from "../icons/MailIcon.astro";
+import BriefCaseIcon from "../icons/BriefCaseIcon.astro";
+import CodeIcon from "../icons/CodeIcon.astro";
+import ProfileIcon from "../icons/ProfileIcon.astro";
+import Experience from "../components/Experience.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Projects from "../components/Projects.astro";
+import About from "../components/About.astro";
+---
+
+<Layout
+	title="Porfolio de Fernando - Desarrollador y Programador Web"
+	description="Contrata a Fernando para crear tu aplicacion web. Desarrollador Web. Especializado en tecnologias modernas."
+>
+	<main class="px-4">
+		<SectionContainer class="pt-44 pb-24">
+			<img
+				class="rounded-full size-14 mb-5"
+				src="Profile.jpeg"
+				alt="fer photo"
+			/>
+			<h1
+				class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-5 pb-6 lg:pb-10"
+			>
+				Hey! soy Fernando
+				<div class="flex justify-center items-center">
+					<a
+						href="https://www.linkedin.com/in/fernando-guerrero-ordo%C3%B1ez-a63015272/"
+						target="_blank"
+						rel="noopener"
+						class="flex justify-center items-center"
+					>
+						<Badge>Disponible</Badge>
+					</a>
+				</div>
+			</h1>
+			<h2 class="text-xl lg:text-2xl text-pretty max-w-[700px]">
+				<span class="text-green-200">Junior.</span>
+				<span class="text-yellow-100/90">Desarrollador Web.</span>
+				<span class="text-red-200/90">De Aguascalientes, Ags. Mexico.</span>
+				<span class="opacity-80">
+					Me especializo en crear aplicaciones Web con tecnologías modernas.
+				</span>
+			</h2>
+
+			<nav class="flex gap-4 mt-8 flex-wrap">
+				<SocialPill
+					href="https://www.linkedin.com/in/fernando-guerrero-ordo%C3%B1ez-a63015272/"
+				>
+					<LinkedInIcon class="size-4 lg:size-6" />
+					LinkedIn
+				</SocialPill>
+				<SocialPill href="https://github.com/WarriorGW">
+					<GitHubIcon class="size-4 lg:size-6" />
+					GitHub
+				</SocialPill>
+				<SocialPill href="mailto:ferweb.rordo@gmail.comm">
+					<MailIcon class="size-4 lg:size-6" />
+					ferweb.rordo@gmail.com
+				</SocialPill>
+			</nav>
+		</SectionContainer>
+
+		<SectionContainer id="experience">
+			<h2 class="text-4xl font-semibold mb-6 flex gap-x-3 items-center">
+				<BriefCaseIcon class="size-8" />
+				Experiencia laboral
+			</h2>
+			<Experience />
+		</SectionContainer>
+
+		<SectionContainer id="projects">
+			<h2 class="text-4xl font-semibold mb-6 flex gap-x-3 items-center">
+				<CodeIcon class="size-8" />
+				Proyectos
+			</h2>
+			<Projects />
+		</SectionContainer>
+
+		<SectionContainer id="about" class="my-20">
+			<h2
+				class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-white"
+			>
+				<ProfileIcon class="size-8" />
+				Sobre mí
+			</h2>
+			<About />
+		</SectionContainer>
+	</main>
+</Layout>

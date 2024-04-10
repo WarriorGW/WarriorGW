@@ -1,0 +1,88 @@
+---
+import NextIcon from "../icons/NextIcon.astro";
+import ReactIcon from "../icons/ReactIcon.astro";
+import TailwindIcon from "../icons/TailwindIcon.astro";
+
+const TAGS = {
+	Next: {
+		name: "Next",
+		class: "bg-black text-white",
+		icon: NextIcon,
+	},
+	Tailwind: {
+		name: "Tailwind",
+		class: "bg-[#003159] text-white",
+		icon: TailwindIcon,
+	},
+	React: {
+		name: "React",
+		class: "bg-blue-600 text-white",
+		icon: ReactIcon,
+	},
+};
+
+const PRLIST = [
+	{
+		title: "Dulces Recuerdos",
+		description:
+			"Lider en el desarrollo y mantenimiento de catalogo web para la empresa Dulces Recuerdos. Realice el desarrollo de la pagina web en React y el backend en Node. Ademas de la implementacion de la base de datos en MySQL. La pagina actualmente no tiene base de datos en la nube, por ello no se muestran los productos en la pagina.",
+		url: "https://warriorgw.github.io/Dulces-Recuerdos/",
+		github: "#",
+		image: "DulcesRecuerdos.png",
+		// tags: ["React", "Node", "MySQL", "Express", "Cloudinary", "Bootstrap"],
+		tags: [TAGS.React],
+	},
+	{
+		title: "Dashboard de ESP32",
+		description:
+			"En este proyecto realice una coneccion con una ESP32 para obtener datos de sensores de temperatura, humedad, movimiento, proximidad y de luz. Los datos se muestran en una pagina web en tiempo real. Ademas de guardar los datos en MySQL para despues acceder a ellos y mostrarlos en una grafica. La pagina web esta desarrollada en Next.",
+		url: "#",
+		github: "#",
+		image: "Esp32.png",
+		// tags: [TAGS.Next, "MySQL", TAGS.Tailwind],
+		tags: [TAGS.Next, TAGS.Tailwind],
+	},
+	{
+		title: "MongoDB",
+		description:
+			"Pagina web en donde implemente una base de datos de MongoDB. Unicamente tiene CRUD de una coleccion de usuarios.",
+		url: "#",
+		github: "#",
+		image: "MongoDB.png",
+		// tags: [TAGS.Next, "MongoDB", TAGS.Tailwind],
+		tags: [TAGS.Next, TAGS.Tailwind],
+	},
+];
+---
+
+{
+	PRLIST.map((pr) => (
+		<article class="my-10">
+			<h3 class="text-2xl font-semibold text-yellow-200/85 mb-2">{pr.title}</h3>
+			<p class="text-lg mb-4 text-pretty">{pr.description}</p>
+			<ul class="flex gap-x-2 flex-row mb-2">
+				<li>
+					{pr.tags.map((tag) => (
+						<li>
+							<span
+								class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-3`}
+							>
+								<tag.icon class="size-4" />
+								{tag.name}
+							</span>
+						</li>
+					))}
+				</li>
+			</ul>
+			<img
+				class="rounded shadow-2xl shadow-white/20"
+				src={pr.image}
+				alt={`Captura de pantalla de ${pr.title}`}
+				width="1600"
+				height="900"
+				decoding="async"
+				loading="lazy"
+			/>
+		</article>
+	))
+}
