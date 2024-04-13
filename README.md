@@ -10,7 +10,7 @@
 
 ## Projects
 
-Here are some of the projects I've been working on:
+Aquí tienes algunos de los proyectos en los que he estado trabajando:
 
 - [Dulces Recuerdos](https://warriorgw.github.io/Dulces-Recuerdos/): Es una página web en la que se muestra el catálogo de productos de una empresa.
 - [Trivia Battle](https://trivia-battle.vercel.app/): Es un juego de trivia que tiene muchas preguntas, te permite administrar por medio del Log-In todas las preguntas que tiene, teniendo el CRUD completo.
